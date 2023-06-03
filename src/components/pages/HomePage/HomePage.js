@@ -7,9 +7,9 @@ import Loader from "../../common/Loader/Loader";
 const HomePage = () => {
 
     const tables = useSelector(state => getAllTables(state));
-
-    if(!tables) return <Loader />
-    else
+    console.log('tables: ', tables)
+    if(tables.length < 1 ) return <Loader />
+    else 
     return(
         <div>
             <div>
